@@ -11,7 +11,7 @@
       and <strong>color palette</strong> generators to simplify your life as a web developer.</p>
       <div class="row">
        
-       {{--Random User Generator--}}
+       {{--Lorem Ipsum Generator--}}
        
         <div class="col-md-3">
         	<h3>Lorem Ipsum </h3>
@@ -34,7 +34,7 @@
         {{--Random User Generator--}}
         
         <div class="col-md-3">
-        	<h3>Random Users</h3>
+        	<h3>Users</h3>
         	<p><strong>Fake users for app testing</strong>. Select 5 to 99 fake users, with optional birthdates and profiles. </p>
 			
 			{{ Form::open(array(
