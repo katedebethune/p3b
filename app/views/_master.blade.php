@@ -10,7 +10,7 @@
         <title>Developer's Best Friend</title>
         {{-- HTML::style('css/pm_reset.css') --}}
         {{-- HTML::style('css/bootstrap.css') --}}
-        {{-- HTML::style('css/styles.css') --}}
+        {{ HTML::style('styles/styles.css') }}
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -25,31 +25,25 @@
         
 </head>
 <body>
-		<!-- <a href='/'><img class='logo' src="/images/anvil.png" alt="dev best friend logo"></a> -->
-		
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       		<div class="container">
         		<div class="navbar-header">
           			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             			<span class="sr-only">Toggle navigation</span>
             			<span class="icon-bar"></span>
-            			<!-- <span class="icon-bar"></span> -->
-            			<!-- <span class="icon-bar"></span> -->
           			</button>
           			<a class="navbar-brand" href="/">The Developer's Best Friend</a>
         		</div>
         		<div id="navbar" class="collapse navbar-collapse">
           			<ul class="nav navbar-nav">
             			<li class="active"><a href="/">Home</a></li>
-            			<!-- <li><a href="#about">About</a></li> -->
-            			<!-- <li><a href="#contact">Contact</a></li> -->
           			</ul>
         		</div><!--/.nav-collapse -->
       		</div>
     	</nav>
 		
 		<div class="container">
-			<br /><br /><br />
+			<br /><br />
 			<!-- <div class="page-header"> -->
         		<!-- <h1>Tools for Web Development</h1> -->
         		<!-- <p class="lead">Tools for Web Development</p> -->
@@ -64,12 +58,15 @@
 			</div> -->
 	
 			<div style="clear: both;"></div>
-				{{-- @yield('nav') --}}
 				@yield('content')
-			<br>
-			<div class="footer">
-				<p>copyright 2014, SK deBethune, all rights reserved</p>
-			</div>
+			<br /><br />
+			
+			 <div class="footer">
+      			<div class="container">
+        			<p class="text-muted">Copyright &#169; {{ date("Y"); }} SKD</p>
+      			</div>
+    		</div>
+			
 		</div>
 </body>
 

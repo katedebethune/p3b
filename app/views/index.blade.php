@@ -6,7 +6,7 @@
 
 @section('content')
 	
-	 <h3>Tools for Web Development</h3>
+	 <h2>Tools for Web Development</h2>
       <p>Offering <strong>lorem ipsum</strong>, <strong>fake user</strong>, <strong>random password</strong>, 
       and <strong>color palette</strong> generators to simplify your life as a web developer.</p>
       <div class="row">
@@ -14,9 +14,8 @@
        {{--Random User Generator--}}
        
         <div class="col-md-3">
-        	<h4>Lorem Ipsum </h4>
-        	<p>Dummy text for layout and prototyping.</p> 
-			<p>Select up to 99 paragraphs.</p>
+        	<h3>Lorem Ipsum </h3>
+        	<p><strong>Dummy text for layout</strong>. Select up to 99 paragraphs.</p>
 			
 			{{ Form::open(array(
 				'url' => '/lorem',
@@ -25,7 +24,7 @@
 				{{-- paragraph request --}}
 				{{ Form::label('paragraphs', 'Paragraphs') }}
 				{{ Form::text('paragraphs', '5', array('class' => 'resizedTextbox')) }}
-				<br>
+				<br><br>
 				{{-- submit button --}}
 				{{ Form::submit('Get my lorem!!') }}
 		
@@ -35,10 +34,8 @@
         {{--Random User Generator--}}
         
         <div class="col-md-3">
-        	<h4>Random Users</h4>
-        	<p>Fake users for app testing.</p> 
-			<p>Select from 5 to 99 fake users, with optional birthdates and profiles. 
-			If all three options are selected, also outputs arrays for db script.</p>
+        	<h3>Random Users</h3>
+        	<p><strong>Fake users for app testing</strong>. Select from 5 to 99 fake users, with optional birthdates and profiles. </p>
 			
 			{{ Form::open(array(
 				'url' => '/users',
@@ -53,7 +50,7 @@
 				<br>
 				{{ Form::label('profile', 'Profile?') }}
 				{{ Form::select('profile', array('1' => 'yes', '0' => 'no'), '1') }}
-				<br>
+				<br><br>
 				{{-- submit button --}}
 				{{ Form::submit('Get my users!!') }}
 
@@ -63,8 +60,8 @@
     	{{--Color Extractor--}}
     	
         <div class="col-md-3">
-        	<h4>Colors</h4>
-        	<p>Color palette from any png image (outputs up to 5 colors).</p>
+        	<h3>Colors</h3>
+        	<p><strong>Create a color palette</strong> from any <strong>png</strong> image (outputs up to 5 colors).</p>
         	
         	{{ Form::open(array('url'=>'color_extractor','files'=>true)) }}
 	
@@ -85,9 +82,8 @@
         {{--Password Generator --}}
         
         <div class="col-md-3">
-        	<h4>Passwords</h4>
-        	<p>Random, multi-word passwords.</p> 
-  			<p>Select from 3 to 8 words, with optional symbol, digit, or leading cap.</p>
+        	<h3>Passwords</h3>
+        	<p><strong>Random, multi-word passwords</strong>. Select from 3 to 8 words, with optional symbol, digit, or leading cap.</p>
   			
   			{{ Form::open(array(
 				'url' => '/password_gen',
@@ -95,21 +91,21 @@
 			)) }}
 
 				{{--select number of words --}}
-				{{ Form::label('num_words', 'Number of Words') }}
+				{{ Form::label('num_words', 'Words') }}
 				{{ Form::text('num_words', '3', array('class' => 'resizedTextbox')) }}
-	
+				<br>
 				{{--select optional symbol --}}
-				{{ Form::label('symbol', 'Add a symbol?') }}
+				{{ Form::label('symbol', 'Symbol?') }}
 				{{ Form::select('symbol', array('1' => 'yes', '0' => 'no'), '1')}}
 				<br>
 				{{--select optional digit --}}
-				{{ Form::label('digit', 'Add a number?') }}
+				{{ Form::label('digit', 'Number?') }}
 				{{ Form::select('digit', array('1' => 'yes', '0' => 'no'), '1') }}
-	
-				{{--select optional leading cap --}}
-				{{ Form::label('cap', 'Capitalize first letter?') }}
-				{{ Form::select('cap',array('1' => 'yes', '0' => 'no'), '1')}}
 				<br>
+				{{--select optional leading cap --}}
+				{{ Form::label('cap', 'Leading cap?') }}
+				{{ Form::select('cap',array('1' => 'yes', '0' => 'no'), '1')}}
+				<br><br>
 		
 				{{-- submit button --}}
 				{{ Form::submit('Get my password!!') }}
