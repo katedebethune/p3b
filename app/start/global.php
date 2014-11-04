@@ -79,3 +79,9 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/* HTML Macro */
+HTML::macro('nav', function()
+{
+    return '<nav><ul><li><a href=\'/\'>&lt;-Back</a></li></ul></nav>';
+});
