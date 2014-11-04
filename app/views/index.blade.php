@@ -24,7 +24,7 @@
 				{{-- paragraph request --}}
 				{{ Form::label('paragraphs', 'Paragraphs') }}
 				{{ Form::text('paragraphs', '5', array('class' => 'resizedTextbox')) }}
-				<br><br>
+				<br>
 				{{-- submit button --}}
 				{{ Form::submit('Get my lorem!!') }}
 		
@@ -35,7 +35,7 @@
         
         <div class="col-md-3">
         	<h3>Random Users</h3>
-        	<p><strong>Fake users for app testing</strong>. Select from 5 to 99 fake users, with optional birthdates and profiles. </p>
+        	<p><strong>Fake users for app testing</strong>. Select 5 to 99 fake users, with optional birthdates and profiles. </p>
 			
 			{{ Form::open(array(
 				'url' => '/users',
@@ -50,7 +50,7 @@
 				<br>
 				{{ Form::label('profile', 'Profile?') }}
 				{{ Form::select('profile', array('1' => 'yes', '0' => 'no'), '1') }}
-				<br><br>
+				<br>
 				{{-- submit button --}}
 				{{ Form::submit('Get my users!!') }}
 
@@ -61,7 +61,7 @@
     	
         <div class="col-md-3">
         	<h3>Colors</h3>
-        	<p><strong>Create a color palette</strong> from any <strong>png</strong> image (outputs up to 5 colors).</p>
+        	<p><strong>Create a color palette</strong> from any <strong>png</strong> image.</p>
         	
         	{{ Form::open(array('url'=>'color_extractor','files'=>true)) }}
 	
@@ -83,7 +83,7 @@
         
         <div class="col-md-3">
         	<h3>Passwords</h3>
-        	<p><strong>Random, multi-word passwords</strong>. Select from 3 to 8 words, with optional symbol, digit, or leading cap.</p>
+        	<p><strong>Random, multi-word passwords</strong>. Select 3 to 8 words, with optional symbol, digit, or leading cap.</p>
   			
   			{{ Form::open(array(
 				'url' => '/password_gen',
@@ -105,8 +105,7 @@
 				{{--select optional leading cap --}}
 				{{ Form::label('cap', 'Leading cap?') }}
 				{{ Form::select('cap',array('1' => 'yes', '0' => 'no'), '1')}}
-				<br><br>
-		
+				<br>
 				{{-- submit button --}}
 				{{ Form::submit('Get my password!!') }}
 

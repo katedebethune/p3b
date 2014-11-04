@@ -22,6 +22,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		
+		{{ HTML::style('styles/styles.css') }}
         
 </head>
 <body>
