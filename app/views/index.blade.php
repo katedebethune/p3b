@@ -26,7 +26,7 @@
 				{{ Form::text('paragraphs', '5', array('class' => 'resizedTextbox')) }}
 				<br>
 				{{-- submit button --}}
-				{{ Form::submit('Get my lorem!!') }}
+				{{ Form::submit('Get my lorem!!', array('class' => 'btn btn-small btn-primary')) }}
 		
 			{{ Form::close() }}
         </div>
@@ -52,7 +52,7 @@
 				{{ Form::select('profile', array('1' => 'yes', '0' => 'no'), '1') }}
 				<br>
 				{{-- submit button --}}
-				{{ Form::submit('Get my users!!') }}
+				{{ Form::submit('Get my users!!', array('class' => 'btn btn-small btn-primary')) }}
 
 			{{ Form::close() }}
         </div>
@@ -71,10 +71,10 @@
   					<br/>
   	
   					{{-- submit buttons --}}
-  					{{ Form::submit('Get my colors!!') }}
+  					{{ Form::submit('Get my colors!!', array('class' => 'btn btn-small btn-primary')) }}
   
   					{{-- reset buttons --}}
-  					{{ Form::reset('Reset') }}
+  					{{ Form::reset('Reset', array('class' => 'btn btn-small')) }}
   
   			{{ Form::close() }}
         </div>
@@ -107,7 +107,7 @@
 				{{ Form::select('cap',array('1' => 'yes', '0' => 'no'), '1')}}
 				<br>
 				{{-- submit button --}}
-				{{ Form::submit('Get my password!!') }}
+				{{ Form::submit('Get my password!!', array('class' => 'btn btn-small btn-primary')) }}
 
 		{{ Form::close() }}
         </div>
