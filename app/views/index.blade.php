@@ -187,7 +187,7 @@
   <h3>Passwords</h3>
   <div> 
    
-   <p>Select 3 to 8 words, with optional symbol, digit, or leading cap.</p>
+   <p><strong>Random, multi-word passwords</strong>. Select 3 to 8 words, with optional symbol, digit, or leading cap.</p>
    {{ Form::open(array(
 				'url' => '/password_gen',
 				'method' => 'GET'
